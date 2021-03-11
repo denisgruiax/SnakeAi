@@ -1,13 +1,11 @@
-                                >>>SnakeAI<<<
-
-Game Contributors: Denis Gruia, Roxana Tomotas
+Game Name: SnakeAI
 
 Game Description: We want to create a classic snake game where we're going to implement a
     Machine Learning algorithm.
 
 Main Characters: The game is going to has only one character, the snake.
 
-Story: The game is going to be played in two modes, single player or bot training. 
+Story: The game is going to be played in two modes, classic game or AI game. 
 In both cases, the main character will be placed in a garden, where in random position at a time apples will be thrown away.
 For every apple that the snake eats, it will grown. If the snake bites his body, or is going to hit the wall, the game will restart.
 
