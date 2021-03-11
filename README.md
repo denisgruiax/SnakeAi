@@ -1,4 +1,3 @@
-# SnakeAi
+                    #SnakeAI#
 
-Team Members: Roxana Tomotas, Denis Gruia
-
+Game Contributors: Denis Gruia, Roxana Tomotas.
