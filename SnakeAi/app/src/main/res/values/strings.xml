@@ -5,9 +5,11 @@
     <string name="menu_op2">AI Game</string>
     <string name="todo">TODO</string>
 
-    <!--Login-->
+    <!--Login and register-->
+    <string name="register">Register</string>
     <string name="login">Log in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="account">No account?</string>
+
 </resources>
