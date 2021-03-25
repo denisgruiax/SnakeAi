@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/difficulties"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/snake"
+        android:text="@string/difficulties"
+        android:textColor="@color/red"
+        android:fontFamily="@font/gill_sans_bold"
+        android:textSize="40sp"
+        android:layout_marginBottom="70dp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_bold"
+        android:text="@string/easy"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/medium"
+        app:layout_constraintTop_toBottomOf="@id/difficulties"
+        app:layout_constraintBottom_toTopOf="@id/medium"
+        android:layout_marginTop="20dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/easy"
+        app:layout_constraintStart_toStartOf="@id/hard"
+        app:layout_constraintBottom_toTopOf="@id/hard"
+        android:text="@string/medium"
+        android:textSize="15sp"
+        android:textColor="@color/red"
+        android:fontFamily="@font/gill_sans_bold">
+
+    </Button>
+
+    <Button
+        android:id="@+id/hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_bold"
+        android:text="@string/hard"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/medium"
+        app:layout_constraintStart_toStartOf="@+id/difficulties"
+        app:layout_constraintTop_toBottomOf="@id/medium">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/apple0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/easy"
+        app:layout_constraintEnd_toEndOf="@+id/apple3"
+        app:layout_constraintStart_toStartOf="@+id/apple2"
+        app:layout_constraintTop_toTopOf="@id/easy"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/medium"
+        app:layout_constraintStart_toStartOf="@id/apple4"
+        app:layout_constraintTop_toTopOf="@id/medium"
+        app:layout_constraintEnd_toStartOf="@id/apple3"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintTop_toTopOf="@id/apple2"
+        app:layout_constraintStart_toEndOf="@id/apple2"
+        app:layout_constraintEnd_toEndOf="@id/apple6"
+        app:layout_constraintBottom_toBottomOf="@id/apple2"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/hard"
+        app:layout_constraintEnd_toStartOf="@id/apple5"
+        app:layout_constraintStart_toEndOf="@id/hard"
+        app:layout_constraintTop_toTopOf="@id/hard"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/apple4"
+        app:layout_constraintEnd_toStartOf="@id/apple6"
+        app:layout_constraintStart_toEndOf="@id/apple4"
+        app:layout_constraintTop_toTopOf="@id/apple4"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/apple6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/apple5"
+        app:layout_constraintEnd_toEndOf="@id/difficulties"
+        app:layout_constraintStart_toEndOf="@id/apple5"
+        app:layout_constraintTop_toTopOf="@id/apple5"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/snake"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_snake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingRight="-50dp"
+        android:paddingBottom="-50dp"
+        android:paddingEnd="-50dp"
+        tools:ignore="RtlSymmetry">
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cup"
+        app:layout_constraintBottom_toTopOf="@id/difficulties"
+        app:layout_constraintEnd_toEndOf="@id/difficulties"
+        app:layout_constraintStart_toStartOf="@id/difficulties"
+        tools:ignore="contentDescription">
+    </ImageView>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/apple0"
+        app:layout_constraintStart_toStartOf="@id/apple0"
+        app:layout_constraintEnd_toEndOf="@id/apple0"
+        app:layout_constraintTop_toTopOf="@id/apple0"
+        android:background="@color/transparent"
+        tools:ignore="contentDescription">
+    </Button>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/apple0"
+        app:layout_constraintEnd_toEndOf="@+id/apple0"
+        app:layout_constraintStart_toStartOf="@+id/apple0"
+        app:layout_constraintTop_toTopOf="@+id/apple0"
+        android:layout_marginTop="10dp"
+        tools:ignore="contentDescription">
+
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
