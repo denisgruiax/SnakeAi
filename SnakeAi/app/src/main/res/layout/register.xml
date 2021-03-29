@@ -8,7 +8,7 @@
     android:background="@drawable/background">
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/txt_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="425dp"
@@ -25,7 +25,7 @@
     </TextView>
 
     <EditText
-        android:id="@id/username"
+        android:id="@id/edit_txt_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_baseline_face_24"
@@ -34,16 +34,16 @@
         android:text="@string/username"
         android:textColor="@color/red"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register">
+        app:layout_constraintBottom_toTopOf="@id/edit_txt_password"
+        app:layout_constraintEnd_toEndOf="@id/txt_register"
+        app:layout_constraintStart_toStartOf="@id/txt_register"
+        app:layout_constraintTop_toBottomOf="@id/txt_register">
 
     </EditText>
 
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/edit_txt_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -52,21 +52,21 @@
         android:text="@string/password"
         android:textColor="@color/red"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@id/snake"
-        app:layout_constraintStart_toStartOf="@+id/username"
-        app:layout_constraintTop_toTopOf="@id/username"
-        android:layout_marginBottom="100dp">
+        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/txt_register"
+        app:layout_constraintEnd_toEndOf="@id/txt_register"
+        app:layout_constraintTop_toTopOf="@id/edit_txt_username">
 
     </EditText>
 
     <Button
-        android:id="@+id/log_in_b"
+        android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        app:layout_constraintBottom_toTopOf="@id/snake"
-        app:layout_constraintStart_toStartOf="@id/password"
-        app:layout_constraintEnd_toEndOf="@id/password"
+        app:layout_constraintTop_toTopOf="@id/edit_txt_password"
+        app:layout_constraintBottom_toTopOf="@id/img_snake"
+        app:layout_constraintStart_toStartOf="@id/txt_register"
+        app:layout_constraintEnd_toEndOf="@id/txt_register"
         android:text="Register"
         android:fontFamily="@font/gill_sans_bold"
         android:textColor="@color/red"
@@ -75,7 +75,7 @@
     </Button>
 
     <ImageView
-        android:id="@+id/apple"
+        android:id="@+id/img_apple"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="10dp"
@@ -88,7 +88,7 @@
     </ImageView>
 
     <ImageView
-        android:id="@+id/snake"
+        android:id="@+id/img_snake"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:paddingEnd="-50dp"
@@ -102,16 +102,18 @@
     </ImageView>
 
     <ImageView
-        android:id="@+id/arrow"
+        android:id="@+id/img_arrow"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/left_arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/apple"
-        app:layout_constraintEnd_toEndOf="@+id/apple"
-        app:layout_constraintStart_toStartOf="@+id/apple"
-        app:layout_constraintTop_toTopOf="@+id/apple">
+        app:layout_constraintBottom_toBottomOf="@id/img_apple"
+        app:layout_constraintEnd_toEndOf="@id/img_apple"
+        app:layout_constraintStart_toStartOf="@id/img_apple"
+        app:layout_constraintTop_toTopOf="@id/img_apple">
 
     </ImageView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

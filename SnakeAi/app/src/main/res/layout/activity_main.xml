@@ -8,7 +8,7 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/apple"
+        android:id="@+id/img_apple"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:src="@drawable/apple"
@@ -21,7 +21,7 @@
     </ImageView>
 
     <ImageView
-        android:id="@+id/snake"
+        android:id="@+id/img_snake"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/ic_snake"
@@ -35,7 +35,7 @@
     </ImageView>
 
     <ImageView
-        android:id="@+id/brain"
+        android:id="@+id/img_brain"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/artificial_brain"
@@ -47,42 +47,42 @@
     </ImageView>
 
     <ImageView
-        android:id="@+id/arrow"
+        android:id="@+id/img_arrow"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:src="@drawable/left_arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/apple"
-        app:layout_constraintEnd_toEndOf="@+id/apple"
-        app:layout_constraintStart_toStartOf="@+id/apple"
-        app:layout_constraintTop_toTopOf="@+id/apple"
+        app:layout_constraintBottom_toBottomOf="@+id/img_apple"
+        app:layout_constraintEnd_toEndOf="@+id/img_apple"
+        app:layout_constraintStart_toStartOf="@+id/img_apple"
+        app:layout_constraintTop_toTopOf="@+id/img_apple"
         android:layout_marginTop="10dp">
 
     </ImageView>
 
     <Button
-        android:id="@+id/menu_op2"
+        android:id="@+id/btn_ai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/brain"
-        app:layout_constraintBottom_toBottomOf="@+id/brain"
-        app:layout_constraintEnd_toEndOf="@+id/brain"
-        app:layout_constraintTop_toTopOf="@+id/brain"
         android:layout_marginBottom="50dp"
+        android:fontFamily="@font/gill_sans_bold"
         android:text="@string/menu_op2"
         android:textColor="@color/red"
-        android:fontFamily="@font/gill_sans_bold"
-        android:textSize="15sp">
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_brain"
+        app:layout_constraintEnd_toEndOf="@+id/img_brain"
+        app:layout_constraintStart_toStartOf="@+id/img_brain"
+        app:layout_constraintTop_toTopOf="@+id/img_brain">
 
     </Button>
 
     <Button
-        android:id="@+id/menu_op1"
+        android:id="@+id/btn_classic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/brain"
-        app:layout_constraintBottom_toTopOf="@+id/brain"
-        app:layout_constraintEnd_toEndOf="@+id/brain"
-        app:layout_constraintTop_toBottomOf="@id/app_name"
+        app:layout_constraintStart_toStartOf="@+id/img_brain"
+        app:layout_constraintBottom_toTopOf="@+id/img_brain"
+        app:layout_constraintEnd_toEndOf="@+id/img_brain"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
         android:text="@string/menu_op1"
         android:textColor="@color/red"
         android:fontFamily="@font/gill_sans_bold"
@@ -91,25 +91,25 @@
     </Button>
 
     <Button
-        android:id="@+id/back"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/apple"
-        app:layout_constraintStart_toStartOf="@id/apple"
-        app:layout_constraintEnd_toEndOf="@id/apple"
-        app:layout_constraintTop_toTopOf="@id/apple"
+        app:layout_constraintBottom_toBottomOf="@id/img_apple"
+        app:layout_constraintStart_toStartOf="@id/img_apple"
+        app:layout_constraintEnd_toEndOf="@id/img_apple"
+        app:layout_constraintTop_toTopOf="@id/img_apple"
         android:background="@color/transparent">
     </Button>
 
     <TextView
-        android:id="@+id/app_name"
+        android:id="@+id/text_name"
         android:background="@color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_op1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_classic"
         android:text="@string/app_name"
         android:textColor="@color/red"
         android:fontFamily="@font/gill_sans_bold"
