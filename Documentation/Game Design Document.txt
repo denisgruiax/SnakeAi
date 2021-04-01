@@ -17,7 +17,7 @@ Gameplay:
 
     Game mechanincs: In time of the gaming, there will be 6 buttons, 4 buttons for move and 2 buttons for speed change. 
 
-    Power-ups: Slow-down or increase the speed, invicibility, faster growth.
+    Power-ups: Slow-down or increase the speed, invicibility, stop growth but increase the score.
 
     Levels and challanges: With each level passed, the snake will unlock a power. The main challange and the only one is that the snake will growing 
         and the game will be more harder to play.
