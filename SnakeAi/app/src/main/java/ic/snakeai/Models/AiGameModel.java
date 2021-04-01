@@ -1,4 +1,4 @@
 package ic.snakeai.Models;
 
-public class ClassicGame {
+public class AiGameModel {
 }

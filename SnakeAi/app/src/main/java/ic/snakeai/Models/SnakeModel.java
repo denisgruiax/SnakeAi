@@ -1,5 +1,5 @@
 package ic.snakeai.Models;
 
-public class Snake {
+public class SnakeModel {
 
 }
