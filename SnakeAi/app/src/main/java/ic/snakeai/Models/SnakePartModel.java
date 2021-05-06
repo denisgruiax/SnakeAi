@@ -1,4 +1,4 @@
 package ic.snakeai.Models;
 
-public class GameModel {
+public class SnakePartModel {
 }
