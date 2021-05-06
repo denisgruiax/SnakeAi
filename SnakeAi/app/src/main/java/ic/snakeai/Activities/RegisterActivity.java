@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.log_in);
+        setContentView(R.layout.activity_login);
 
         username = findViewById(R.id.edit_txt_username);
         password = findViewById(ic.snakeai.R.id.edit_txt_password);

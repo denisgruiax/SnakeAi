@@ -1,7 +1,5 @@
 package ic.snakeai.Models;
 
-import java.util.Objects;
-
 public class UserModel {
     private String username;
     private String password;
@@ -35,6 +33,8 @@ public class UserModel {
     public Integer getMaxScore() {
         return maxScore;
     }
+
+    public void setMaxScore(Integer maxScore) { this.maxScore = maxScore; }
 
     @Override
     public boolean equals(Object o) {

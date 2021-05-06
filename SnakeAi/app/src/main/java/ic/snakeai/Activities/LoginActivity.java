@@ -1,11 +1,9 @@
 package ic.snakeai.Activities;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,10 +23,14 @@ public class LoginActivity extends AppCompatActivity {
 
     String admin_username = "admin";
     String admin_password = "admin";
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.log_in);
+        setContentView(R.layout.activity_login);
+
+        btn_login=(Button) findViewById(R.id.btn_login);
+        btn_no_account=(Button) findViewById(R.id.btn_no_account);
+        btn_back=(Button) findViewById(R.id.btn_back);
 
         btn_login.setOnClickListener(view -> {
             try {
@@ -49,10 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         btn_back.setOnClickListener(view -> {
             goToMainActivity();
         });
-    }
-
-    public void onStart() {
-        super.onStart();
     }
 
     public void loginAction() throws InterruptedException, EmptyFieldException, IncorrectLoginData {

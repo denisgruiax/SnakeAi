@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import ic.snakeai.Activities.AiGameActivity;
 import ic.snakeai.Activities.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 System.out.println("login");
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                setContentView(R.layout.activity_login);
                 startActivity(intent);
             }
         });
@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 System.out.println("ai");
-                Intent intent = new Intent(MainActivity.this, AiGameActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
 
-        btn_back.setOnClickListener(new View.OnClickListener() {
+        btn_back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
