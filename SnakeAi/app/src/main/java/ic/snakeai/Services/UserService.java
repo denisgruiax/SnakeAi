@@ -1,21 +1,10 @@
 package ic.snakeai.Services;
 
-import android.os.FileUtils;
-
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import Exceptions.CouldNotWriteUsersException;
-import Exceptions.EmptyFieldException;
-import Exceptions.IncorrectLoginData;
+import ic.snakeai.Exceptions.EmptyFieldException;
+import ic.snakeai.Exceptions.IncorrectLoginData;
 import ic.snakeai.Models.UserModel;
   
 /* ******************************************************************

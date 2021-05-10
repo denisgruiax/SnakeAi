@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toTopOf="@id/img_snake"
         app:layout_constraintStart_toStartOf="@id/txt_login"
         app:layout_constraintEnd_toEndOf="@id/txt_login"
-        android:text="Login"
+        android:text="@string/login"
         android:fontFamily="@font/gill_sans_bold"
         android:textColor="@color/red"
         android:textSize="20sp">

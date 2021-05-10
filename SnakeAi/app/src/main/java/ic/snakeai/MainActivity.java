@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import ic.snakeai.Activities.LoginActivity;
+import ic.snakeai.Activities.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
     public Button btn_classic;
@@ -29,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             {
                 System.out.println("login");
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                setContentView(R.layout.activity_login);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 System.out.println("ai");
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });

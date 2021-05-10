@@ -1,4 +1,4 @@
-package Exceptions;
+package ic.snakeai.Exceptions;
 
 public class EmptyFieldException extends Exception {
     public EmptyFieldException() {

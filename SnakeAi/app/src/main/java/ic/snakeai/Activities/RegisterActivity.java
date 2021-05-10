@@ -7,38 +7,26 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import Exceptions.EmptyFieldException;
-import Exceptions.IncorrectLoginData;
-import ic.snakeai.Controllers.RegisterController;
+import ic.snakeai.Exceptions.EmptyFieldException;
+import ic.snakeai.Exceptions.IncorrectLoginData;
 import ic.snakeai.MainActivity;
 import ic.snakeai.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    public static Button btn_register;
-    public static EditText username;
-    public static EditText password;
-    public static Button btn_back;
+    public EditText edit_txt_username;
+    public EditText edit_txt_password;
+    public Button btn_register;
+    public Button btn_back;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
-        username = findViewById(R.id.edit_txt_username);
-        password = findViewById(ic.snakeai.R.id.edit_txt_password);
-        btn_register = findViewById(ic.snakeai.R.id.btn_register);
-
-        btn_register.setOnClickListener(view -> {
-            try {
-                this.registerAction();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (EmptyFieldException e) {
-                e.printStackTrace();
-            } catch (IncorrectLoginData incorrectLoginData) {
-                incorrectLoginData.printStackTrace();
-            }
-        });
+        edit_txt_username = (EditText) findViewById(R.id.edit_txt_username);
+        edit_txt_password = (EditText) findViewById(R.id.edit_txt_password);
+        btn_register = (Button) findViewById(R.id.btn_register);
+        btn_back = (Button) findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(view -> {
             goToMainActivity();
@@ -47,10 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void onStart() {
         super.onStart();
-    }
-
-    public void registerAction() throws InterruptedException, EmptyFieldException, IncorrectLoginData {
-        RegisterController.registerAction(this);
     }
 
     public void goToMainActivity()
