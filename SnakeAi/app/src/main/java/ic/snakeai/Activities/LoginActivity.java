@@ -114,7 +114,20 @@ public class LoginActivity extends AppCompatActivity {
      *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data); //It redirects to another activity
 
+        if(requestCode == RC_SIGN_IN){
+            Task task = GoogleSignIn.getSignedInAccountFromIntent(data); //Returns a GoogleSignInAccount present in the result data for the associated Activity started via getSignInIntent().
+
+            try {
+                GoogleSignInAccount account = (GoogleSignInAccount) task.getResult(ApiException.class);
+                firebaseAuthWithGoogle(account);
+            }catch (ApiException exception){
+                Toast.makeText(this, exception.getMessage(), Toast.LENGTH_SHORT).show();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        }
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
@@ -123,7 +136,20 @@ public class LoginActivity extends AppCompatActivity {
      *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void firebaseAuthWithGoogle(GoogleSignInAccount account){
-
+        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
+        firebaseAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener() {
+                    public void onComplete(@NonNull Task task){
+                        if(task.isSuccessful()) {
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            Intent intent = new Intent(getApplicationContext(), Profile.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Sorry auth failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
