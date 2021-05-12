@@ -90,8 +90,8 @@ public class LoginActivity extends AppCompatActivity {
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void signIn(){
         Intent signInIntent = googleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
         //By using the android startActivityForResult() method, we can send information from one activity to another and vice-versa
+        startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
     private void createRequest(){
