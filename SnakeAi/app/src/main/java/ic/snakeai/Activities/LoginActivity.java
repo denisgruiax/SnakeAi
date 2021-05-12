@@ -85,17 +85,6 @@ public class LoginActivity extends AppCompatActivity {
 
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
      *
-     * signIn Function:
-     *
-     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    private void signIn(){
-        Intent signInIntent = googleSignInClient.getSignInIntent();
-        //By using the android startActivityForResult() method, we can send information from one activity to another and vice-versa
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
-     *
      * createRequest Function
      *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -106,6 +95,29 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
+    }
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
+     *
+     * signIn Function:
+     *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    private void signIn(){
+        Intent signInIntent = googleSignInClient.getSignInIntent();
+        //By using the android startActivityForResult() method, we can send information from one activity to another and vice-versa
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+
+    }
+
+    private void firebaseAuthWithGoogle(GoogleSignInAccount account){
+
+    }
+
+    public void goToMainActivity() {
+
     }
 
 }
