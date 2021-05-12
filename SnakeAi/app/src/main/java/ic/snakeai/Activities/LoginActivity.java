@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
      *
      * onCreate(Bundle savedInstanceState) Function in Android:
      *  After Orientation changed then onCreate(Bundle savedInstanceState) will call and recreate the activity and load all data from savedInstanceState.
@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
      *
      * createRequest Function
      *
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
         googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
     }
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
      *
      * signIn Function:
      *
@@ -108,14 +108,29 @@ public class LoginActivity extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
+     *
+     * onActivityResult Function:
+     *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void onActivityResult(int requestCode, int resultCode, Intent data){
 
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
+     *
+     * firebaseAuthWithGoogle Function:
+     *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void firebaseAuthWithGoogle(GoogleSignInAccount account){
 
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
+     *
+     * goToMainActivity Function:
+     *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void goToMainActivity() {
 
     }
