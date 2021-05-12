@@ -129,10 +129,18 @@ public class LoginActivity extends AppCompatActivity {
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
      *
      * goToMainActivity Function:
+     *  Redirects the user to the MainActivity if the back button is pressed while in LoginActivity
      *
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void goToMainActivity() {
-
+        //If the back button "btn_back" is clicked, then the user should be redirected from the login view (LoginActivity) to the main view (MainActivity)
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
