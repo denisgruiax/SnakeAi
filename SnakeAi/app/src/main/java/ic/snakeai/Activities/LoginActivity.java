@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //Set the login view - activity_login layout
         setContentView(R.layout.activity_login);
 
         firebaseAuth = FirebaseAuth.getInstance();
