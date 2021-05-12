@@ -20,6 +20,15 @@ public class LoginActivity extends AppCompatActivity {
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     protected void onStart(){
         super.onStart();
+
+        //Get current user
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        //If the user is valid, start the activity
+        if (user!=null){
+            Intent intent = new Intent(getApplicationContext(), Profile.class);
+            startActivity(intent);
+        }
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
