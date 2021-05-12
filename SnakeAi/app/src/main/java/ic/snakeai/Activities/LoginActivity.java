@@ -9,8 +9,10 @@ import ic.snakeai.R;
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 public class LoginActivity extends AppCompatActivity {
-    //Back button from the loginActivity view
-    public Button btn_back;
+    public Button btn_back; //Back button from the loginActivity view
+    private GoogleSignInClient googleSignInClient; //googleSignInClient object
+    private static final int RC_SIGN_IN = 123;
+    private FirebaseAuth firebaseAuth; //Used firebaseAuth
 
     /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * *
      *
