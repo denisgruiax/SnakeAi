@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         //Set the login view - activity_login layout
         setContentView(R.layout.activity_login);
 
+        //Get an instance by calling getInstance()
         firebaseAuth = FirebaseAuth.getInstance();
         createRequest();
 
