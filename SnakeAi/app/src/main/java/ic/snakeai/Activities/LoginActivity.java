@@ -94,7 +94,18 @@ public class LoginActivity extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * ** * * *
+     *
+     * createRequest Function
+     *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void createRequest(){
+        GoogleSignInOptions googleSignInOptions = new  GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
 
+        googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions);
     }
+
 }
