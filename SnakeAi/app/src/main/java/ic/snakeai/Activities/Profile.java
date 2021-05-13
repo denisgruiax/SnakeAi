@@ -21,7 +21,7 @@ public class Profile extends AppCompatActivity {
 
 
     TextView name, mail;
-    Button logout;
+    Button logout, playgame;
 
 
     @Override
@@ -29,7 +29,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
+        playgame=findViewById(R.id.playgame);
         logout = findViewById(R.id.logout);
         name = findViewById(R.id.name);
         mail = findViewById(R.id.mail);
@@ -51,6 +51,14 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        playgame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                setContentView(R.layout.activity_game);
+                startActivity(intent);
+            }
+        });
 
     }
 }
