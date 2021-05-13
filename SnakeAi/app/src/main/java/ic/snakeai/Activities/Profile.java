@@ -55,7 +55,6 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), GameActivity.class);
-                setContentView(R.layout.activity_game);
                 startActivity(intent);
             }
         });

@@ -24,17 +24,16 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
         ConstantsModel.SCREEN_WIDTH = dm.widthPixels;
         ConstantsModel.SCREEN_HEIGHT = dm.heightPixels;
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game);
         game_model =(GameModel) findViewById(R.id.game_model);
         txt_score = (TextView) findViewById(R.id.txt_score);
         txt_best_score = (TextView) findViewById(R.id.txt_best_score);
-        //dialogScore();
+        dialogScore();
     }
 
     private void dialogScore(){
