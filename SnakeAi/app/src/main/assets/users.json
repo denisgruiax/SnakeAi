@@ -1,0 +1,19 @@
+{
+  "users" : [
+    {
+      "username" : "steven@gmail.com",
+      "password" : "pass123",
+      "score" : 10
+    },
+    {
+      "username" : "matt.henry@gmail.com",
+      "password" : "apple",
+      "score" : 5
+    },
+    {
+      "username" : "david@gmail.com",
+      "password" : "onetwothree",
+      "score" : 5
+    }
+  ]
+}

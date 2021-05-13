@@ -15,9 +15,9 @@ Gameplay:
     Player Skills: The game is going to be simple, the players will can move the snake in four
         directions(up, down, left, right) and by getting a higher score the snake will get some power-up because the game will be harder.
 
-    Game mechanincs: In time of the gaming, there will be 6 buttons, 4 buttons for move and 2 buttons for speed change. 
+    Game mechanincs: In time of the gaming, there will be 5 buttons, 4 buttons for move and one button for activating power-ups. 
 
-    Power-ups: Slow-down or increase the speed, invicibility, faster growth.
+    Power-ups: Slow-down or increase the speed, invicibility, special apples that increase the score.
 
     Levels and challanges: With each level passed, the snake will unlock a power. The main challange and the only one is that the snake will growing 
         and the game will be more harder to play.

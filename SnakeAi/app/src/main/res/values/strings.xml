@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">SnakeAi</string>
+    <!--Main menu-->
+    <string name="app_name">Snake Ai</string>
+    <string name="menu_op1">Classic Game</string>
+    <string name="menu_op2">AI Game</string>
+    <string name="todo">TODO</string>
+
+    <!--Login and register-->
+    <string name="register">Register</string>
+    <string name="login">Log in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="account">No account?</string>
+    <string name="goto_login">Go to login page</string>
+
+    <!--Difficulties-->
+    <string name="difficulties">Difficulties</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+
 </resources>
