@@ -18,5 +18,4 @@ public class UserModelTest {
     public void testMaxscore(){
         assertEquals((Integer)100, user.getMaxScore());
     }
-
 }

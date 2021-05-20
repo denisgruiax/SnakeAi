@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //If the user is valid, start the activity
         if (user!=null){
-            Intent intent = new Intent(getApplicationContext(), Profile.class);
+            Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
             startActivity(intent);
         }
     }
@@ -142,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task task){
                         if(task.isSuccessful()) {
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            Intent intent = new Intent(getApplicationContext(), Profile.class);
+                            Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                             startActivity(intent);
                         }
                         else{
@@ -168,5 +168,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 }

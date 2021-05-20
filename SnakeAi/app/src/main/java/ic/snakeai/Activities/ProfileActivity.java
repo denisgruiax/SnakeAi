@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -17,11 +18,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import ic.snakeai.R;
 
 
-public class Profile extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
 
     TextView name, mail;
     Button logout, playgame;
+    ImageView image_profile;
 
 
     @Override
@@ -33,12 +35,15 @@ public class Profile extends AppCompatActivity {
         logout = findViewById(R.id.logout);
         name = findViewById(R.id.name);
         mail = findViewById(R.id.mail);
+        image_profile=findViewById(R.id.profile_image);
+
 
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
         if(signInAccount != null){
             name.setText(signInAccount.getDisplayName());
             mail.setText(signInAccount.getEmail());
+            image_profile.setImageURI(signInAccount.getPhotoUrl());
         }
 
 
