@@ -26,7 +26,7 @@ import ic.snakeai.R;
 public class GameModel extends View {
     private Bitmap bmGrass1, bmGrass2, bmSnake1, bmApple;
     private ArrayList<GrassModel> arrGrass = new ArrayList<>();
-    private int w = 12, h=21;
+    private int w = 12, h = 21;
     public static int sizeElementMap = 75*ConstantsModel.SCREEN_WIDTH/1080;
     private SnakeModel snake;
     private AppleModel apple;
@@ -45,11 +45,11 @@ public class GameModel extends View {
         if(sp!=null){
             bestScore = sp.getInt("bestscore",0);
         }
-        bmGrass1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass01);
+        bmGrass1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.green);
         bmGrass1 = Bitmap.createScaledBitmap(bmGrass1, sizeElementMap, sizeElementMap, true);
-        bmGrass2 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass02);
+        bmGrass2 = BitmapFactory.decodeResource(this.getResources(), R.drawable.yellow);
         bmGrass2 = Bitmap.createScaledBitmap(bmGrass2, sizeElementMap, sizeElementMap, true);
-        bmSnake1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.snake);
+        bmSnake1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.snake_circle);
         bmSnake1 = Bitmap.createScaledBitmap(bmSnake1, 14*sizeElementMap, sizeElementMap, true);
         bmApple = BitmapFactory.decodeResource(this.getResources(), R.drawable.apple);
         bmApple = Bitmap.createScaledBitmap(bmApple, sizeElementMap, sizeElementMap, true);
@@ -140,7 +140,7 @@ public class GameModel extends View {
 
     public void draw(Canvas canvas){
         super.draw(canvas);
-        canvas.drawColor(0xFF065700);
+        canvas.drawColor(Color.BLUE);
         for(int i = 0; i < arrGrass.size(); i++){
             canvas.drawBitmap(arrGrass.get(i).getBitMap(), arrGrass.get(i).getX(), arrGrass.get(i).getY(), null);
         }

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Button
         android:id="@+id/logout"
-        android:background="@color/transparent"
+        android:background="@drawable/round_backgroung_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
@@ -16,11 +16,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="30dp"/>
 
     <Button
         android:id="@+id/playgame"
-        android:background="@color/transparent"
+        android:background="@drawable/round_backgroung_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PlayGame"
@@ -30,7 +30,8 @@
         app:layout_constraintEnd_toEndOf="@id/logout"
         app:layout_constraintStart_toStartOf="@id/logout"
         app:layout_constraintTop_toBottomOf="@id/logout"
-        android:layout_marginBottom="230dp"/>
+        android:layout_marginBottom="230dp"
+        android:layout_marginTop="10dp"/>
 
     <ImageView
         android:id="@+id/profile_image"
@@ -47,6 +48,7 @@
 
     <TextView
         android:id="@+id/name"
+        android:background="@drawable/round_backgroung_white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -61,6 +63,7 @@
         android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/round_backgroung_white"
         android:text="TextView"
         android:fontFamily="@font/gill_sans_bold"
         android:textColor="@color/black"
