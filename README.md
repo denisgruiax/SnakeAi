@@ -33,14 +33,14 @@ Losing: If the snake goes in the wall or bites his body, the game is going to fi
 **Music and Sound Effects:** The game probably isn't going to have music or sound effects.
 
 **Technical Description:**
-    Targeted OS: Android
-    Game Type: Arcade game and two dimensional(2D).
-    Targeted Technologies: Java, Machine Learning, OpenGL, etc.
+* Targeted OS: Android
+* Game Type: Arcade game and two dimensional(2D).
+* Targeted Technologies: Java, Machine Learning, OpenGL, etc.
 
 **Game Elements:** 
-    1. Snake
-    2. Apple
-    3. Board space (garden)
+* Snake
+* Apple
+* Board space (garden)
 
 **Targeted Audience:** For all ages.
 
